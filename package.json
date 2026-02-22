@@ -1,0 +1,22 @@
+{
+  "name": "@nuwax-ai/sdk",
+  "version": "1.0.0",
+  "description": "Nuwax AI SDK - Unified client for opencode and nuwaxcode",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "undici": "^6.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
