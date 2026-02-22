@@ -1,17 +1,31 @@
 {
   "name": "@nuwax-ai/sdk",
-  "version": "1.0.0",
-  "description": "Nuwax AI SDK - Unified client for opencode and nuwaxcode",
+  "version": "1.2.10",
+  "description": "Nuwax AI SDK - forked from @opencode-ai/sdk with full API support",
+  "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./client": {
+      "import": "./dist/client.js",
+      "types": "./dist/client.d.ts"
+    },
+    "./server": {
+      "import": "./dist/server.js",
+      "types": "./dist/server.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch"
+    "build": "echo 'Using pre-built dist from @opencode-ai/sdk'"
   },
-  "dependencies": {
-    "undici": "^6.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "typescript": "^5.0.0",
     "@types/node": "^20.0.0"
